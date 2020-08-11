@@ -1,0 +1,358 @@
+:root{
+    --primary-color:#191970;
+    --seconadary-color: #f99500;
+    --light-color:#f3f3f3;
+    --dark-color:#333;
+    --extradark-color:dimgray;
+    --max-width:1100px;
+}
+
+.category{
+    --sports-color:#f99500;
+    --ent-color:#a66bbe;
+    --tech-color:#009cff;
+}
+
+.container .logo i{
+    color: #191970;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.container .logo span{
+    font-size: 40px;
+}
+
+.container .logo .primary{
+    color: #191970;
+}
+
+.container .logo .white{
+    color:var(--dark-color);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato' ,sans-serif;
+    line-height: 1.5;
+    background-color: var(--light-color);
+}
+
+a{
+    color:var(--dark-color);
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    margin: 5px 0;
+}
+
+img{
+    width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Staatliches',cursive;
+    line-height: 1.3;
+    margin-bottom: 0.55rem;
+}
+
+/*utilities */
+.container{
+    max-width: var(--max-width);
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+.category{
+    display: inline-block;
+    color: whitesmoke;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0.6rem;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+}
+
+.category-sports{ background-color: var(--sports-color);}
+.category-ent{ background-color: var(--ent-color);}
+.category-tech{ background-color: var(--tech-color);}
+
+.btn{
+    display: inline-block;
+    border: none;
+    background-color: var(--dark-color);
+    color: whitesmoke;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-light{background-color: var(--light-color);}
+.btn-primary{background-color: var(--primary-color);}
+.btn-secondary{background-color: var(--seconadary-color);}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.btn-block{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.card{
+    background: white;
+    padding: 1rem;
+}
+
+.bg-dark{
+    background-color: var(--extradark-color);
+    color: white;
+}
+
+.bg-primary{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.bg-secondary{
+    background-color: var(--seconadary-color);
+    color: white;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a{
+    color: white;
+}
+
+.py-1{
+    padding: 1.5rem 0;
+}
+.py-2{
+    padding: 2rem 0;
+}
+.py-3{
+    padding: 3rem 0;
+}
+.p-1{
+    padding: 1.5rem;
+}
+.p-2{
+    padding: 2rem;
+}
+.p-3{
+    padding: 3rem;
+}
+
+.list li{
+    padding: 5px 0;
+    border-bottom: gray 1px dotted;
+    width: 90%;
+}
+
+.list li a:hover{
+    color: var(--primary-color) !important;
+}
+
+/*Inner Page grid container*/
+.page-container{
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    margin: 2rem 0;
+    grid-gap: 1.5rem;
+}
+
+.page-container > *:first-child{
+    grid-row: 1 / span 4;
+}
+
+.l-heading {
+    border-bottom: 1px dimgray dotted;
+    padding-top: 20px;
+    font-size: 3rem;
+}
+
+/*navigation */
+#main-nav{
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+#main-nav .container{
+    display: grid;
+    grid-template-columns: 6fr 3fr 2fr;
+    padding: 1rem;
+    align-items: center;
+}
+
+#main-nav ul{
+    justify-self: end;
+    display: flex;
+}
+
+#main-nav ul a{
+    text-decoration: none;
+    padding: 0.75rem;
+}
+
+#main-nav ul a.current{
+    background-color: var(--primary-color);
+    color: whitesmoke;
+}
+
+#main-nav ul a:hover{
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+#main-nav .social{
+    justify-self: center;
+}
+
+#main-nav .social i{
+    margin-right: .5rem;
+}
+#main-nav .social .face{
+    color: steelblue;
+}
+#main-nav .social .twit{
+    color: royalblue;
+}
+#main-nav .social .inst{
+    color: mediumvioletred;
+}
+#main-nav .social .you{
+    color: red;
+}
+
+/*showcase */
+#showcase{
+    color: white;
+    background-color: var(--extradark-color);
+    padding: 2rem;
+    position: relative;
+}
+
+#showcase::before{
+    content: '';
+    background: url('../images/Sports.jpeg')no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity:0.4;
+}
+
+#showcase .showcase-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+#showcase .showcase-content{
+    z-index: 1;
+    font-weight: bolder;
+}
+
+#showcase .showcase-content p{
+    margin-bottom: 1rem;
+}
+
+/*home articles */
+#more-articles .articles-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:1rem;
+}
+
+#more-articles .articles-container > *:first-child,#more-articles .articles-container > *:last-child{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    grid-column: 1 / span 2;
+}
+
+#more-articles .articles-container > *:last-child{
+    grid-column: 2 / span 2;
+}
+
+#article .meta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #eee;
+}
+
+#article .meta .category{
+    margin-top: 0.4rem;
+}
+
+/* footer */
+#main-footer{
+    background-color: var(--extradark-color);
+    color: white;
+}
+
+#main-footer .container .logo .white{
+    color:white;
+}
+
+#main-footer .container .logo span{
+    font-size: 22px;
+}
+
+#main-footer a{
+    color: white;
+}
+
+#main-footer .footer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+}
+
+#main-footer .footer-container > *:last-child{
+    background-color: gray;
+    grid-column: 1 / span 4;
+    padding: 0.5rem;
+    font-size: 13px;
+    text-align: center;
+}
+
+#main-footer .footer-container input[type='email']{
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+#main-footer .footer-container input[type='submit']{
+    width: 90%;
+}
+
+
